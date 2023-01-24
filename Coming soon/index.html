@@ -1,0 +1,1684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>lamaahealth - Home</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <!-- <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+
+  <!-- Google Fonts -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet"> -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/venobox/venobox.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  	<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
+    <script type="text/javascript" src="inc/TimeCircles.js"></script>
+    <link rel="stylesheet" href="inc/TimeCircles.css" />
+	<script type="text/javascript">
+	$(document).ready(function () {
+    $(document).on("scroll", onScroll);
+    
+    //smoothscroll
+    $('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        $(document).off("scroll");
+        
+        $('a').each(function () {
+            $(this).removeClass('active');
+        })
+        $(this).addClass('active');
+      
+        var target = this.hash,
+            menu = target;
+        $target = $(target);
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top+2
+        }, 500, 'swing', function () {
+            window.location.hash = target;
+            $(document).on("scroll", onScroll);
+        });
+    });
+});
+
+function onScroll(event){
+    var scrollPos = $(document).scrollTop();
+    $('#menu-center a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            $('#menu-center ul li a').removeClass("active");
+            currLink.addClass("active");
+        }
+        else{
+            currLink.removeClass("active");
+        }
+    });
+}
+	</script>
+ <style>
+ .card{
+ background: #f6f7fd;
+height: 375px;
+padding-bottom: 20px;
+border-radius: 20px;
+margin: 20px 10px;
+ }
+ 
+ .card .name{
+ color:#380f61 !important;
+ font-size:20px !important;
+ font-weight:700;
+ }
+ 
+ .card p{
+ font-size:16px;
+ }
+
+hr { 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+} 
+
+.box{
+width:140px;
+border:1px solid #8cc53c;
+margin:20px
+}
+
+.box p{
+margin:0px;
+padding:0px;
+
+}
+
+@media (max-width: 360px){
+.box{
+width:120px !important;
+border:1px solid #8cc53c;
+margin:20px
+}
+}
+
+video{
+max-width:100%;
+max-height:500px;
+}
+
+.centered {
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.register{
+font-size:12px;
+color:#fff;
+font-weight:bold;
+background:#2dd3cb;
+border-radius:5px;
+margin-bottom:20px !important;
+padding:5px 5px;
+border:1px solid #159aa0;
+cursor:pointer;
+}
+
+
+
+.register:hover{
+background:#8cc53c;
+}
+
+<!-- @media only screen and (max-width: 768px) {
+.size{
+min-width:1200px !important;
+height:300px !important;
+
+}
+} -->
+
+@media only screen and (max-width: 440px) {
+.size{
+min-width:400px !important;
+height:100px !important;
+margin-left:-50px !important;
+}
+}
+
+@media only screen and (max-width: 414px) {
+.size{
+min-width:400px !important;
+height:100px !important;
+margin-left:-50px !important;
+}
+}
+
+@media only screen and (max-width: 384px) {
+.size{
+min-width:360px !important;
+height:90px !important;
+margin-left:-50px !important;
+}
+}
+
+@media only screen and (max-width: 375px) {
+.size{
+min-width:320px !important;
+height:80px !important;
+margin-left:-50px !important;
+}
+}
+
+@media only screen and (max-width: 360px) {
+.size{
+min-width:320px !important;
+height:80px !important;
+margin-left:-50px !important;
+}
+}
+
+@media only screen and (max-width: 340px) {
+.size{
+min-width:300px !important;
+height:75px !important;
+margin-left:-50px !important;
+}
+}
+@media only screen and (max-width: 320px) {
+.size{
+min-width:280px !important;
+height:70px !important;
+margin-left:-50px !important;
+}
+}
+
+
+ </style>
+</head>
+
+<body>
+
+  <!--==========================
+    Header
+  ============================-->
+  <!-- <header id="header">
+    <div class="container-fluid">
+
+      <div id="logo" class="pull-left">
+   
+        <a href="#intro" class="scrollto"><img src="img/Logo-38.png" alt="" title=""></a>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#intro">HOME</a></li>
+          <li><a href="#speakers">SPEAKERS</a></li>
+		  <li><a href="#sponsor">PARTNERS & SPONSOR </a></li>
+		  <li><a href="#event_schedule">SCHEDULE</a></li>
+          <li><a href="#testimonial">TESTIMONIALS</a></li>
+          <li><a href="#supporters">MEDIA PARTNERS</a></li>
+          <li><a href="#contact">CONTACT US</a></li>
+		  <li class="dropdown dropdown-toggle" data-toggle="dropdown"><a href="#">PAST EDITIONS</a></li> 
+		<ul class="dropdown-menu">
+			  <li><a href="#">DUBAI</a></li>
+			  <li><a href="#">MAURITIUS</a></li>
+		</ul>
+          <li class="buy-tickets"><a href="#buy_pass_bg">BOOK TICKET</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header> -->
+
+  <!--==========================
+    Intro Section
+  ============================-->
+  <section id="intro">
+    <div class="intro-container wow fadeIn text-cenetr">
+			<div class="container">
+				<div class="col-md-8" style="margin:auto;">
+					<img src="img/LAAMA_Logo-03.png" style="padding-bottom:30px;">
+				</div>
+			</div>
+			<h1 class="mb-4 pb-0">LAMAA MEDICAL TOURISM</h1> 
+			<h2 class="mb-4 pb-0" style="color:#fff">We're Getting Ready To Launch In</h2>
+
+			<div class="container text-center" id="DateCountdown" data-date="2020-01-31 18:00:00" style="padding:0px;margin:0px;">  
+			
+			</div>
+			<div class="container">
+				<div class="col-md-8" style="margin:auto;">
+					<h2 style="color:#fff">Connect with us</h2>
+						<p style="color:#fff;text-align:center;">ABID HUSSAIN - Managing Director</p>
+						<p style="color:#fff;text-align:center;">	+91 8088 033 436, +91 7259 558 786</p>
+						<p style="color:#fff;text-align:center;">abidhussain60@gmail.com</p>
+
+				</div>
+			</div>
+		
+        <script>
+            $("#DateCountdown").TimeCircles();
+            $("#CountDownTimer").TimeCircles({ time: { Days: { show: false }, Hours: { show: false } }});
+            $("#PageOpenTimer").TimeCircles();
+            
+            var updateTime = function(){
+                var date = $("#date").val();
+                var time = $("#time").val();
+                var datetime = date + ' ' + time + ':00';
+                $("#DateCountdown").data('date', datetime).TimeCircles().start();
+            }
+            $("#date").change(updateTime).keyup(updateTime);
+            $("#time").change(updateTime).keyup(updateTime);
+            
+            // Start and stop are methods applied on the public TimeCircles instance
+            $(".startTimer").click(function() {
+                $("#CountDownTimer").TimeCircles().start();
+            });
+            $(".stopTimer").click(function() {
+                $("#CountDownTimer").TimeCircles().stop();
+            });
+
+            // Fade in and fade out are examples of how chaining can be done with TimeCircles
+            $(".fadeIn").click(function() {
+                $("#PageOpenTimer").fadeIn();
+            });
+            $(".fadeOut").click(function() {
+                $("#PageOpenTimer").fadeOut();
+            });
+
+        </script> 
+ 
+				
+
+      <!-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
+        data-autoplay="true"></a>
+      <a href="#about" class="about-btn scrollto">About The Event</a> -->
+    </div>
+	
+	
+  </section>
+
+  <main id="main">
+
+    <!--==========================
+      About Section
+    ============================-->
+ <!--    <section id="about">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-lg-4 col-md-4 col-sm-4">
+		  <img src="img/about/Icons-03.png" class="img-fluid" style="padding:10px;">
+            <h2 style="">150+ C-LEVEL EXECUTIVES</h2>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4">">
+		  <img src="img/about/Icons-04.png" style="padding:10px;">
+            <h2 style="">40+ SPEAKERS</h2>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4">">
+		  <img src="img/about/Icons-05.png" style="padding:10px;">
+            <h2 style="">90% DECISION MAKERS</h2>
+          </div>
+        </div>
+		 <div class="row text-center">
+          <div class="col-lg-4 col-md-4 col-sm-4">">
+		  <img src="img/about/Icons-06.png" style="padding:10px;">
+            <h2 style="">50 INVESTORS</h2>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4">">
+		  <img src="img/about/Icons-07.png" style="padding:10px;">
+            <h2 style="">25+ EXHIBITORS</h2>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4">">
+		  <img src="img/about/Icons-09.png" style="padding:10px;">
+            <h2 style="">40+ MEDIA INVITED</h2>
+          </div>
+        </div>
+      </div>
+    </section>  -->
+	
+	<!-- <section id="award">
+      <div class="container">
+        <div class="row">
+			<div class="col-lg-12 text-center">
+			<img src="img/icons.png" class="text-center" style="" id="award_icon">
+				<h2 class="text-center">AWARD CATEGORY</h2>
+				<p>Become our sponsor and get a chance to win an award for the desired category that you want to participate.</p>
+			</div>
+		</div>
+		
+		<div class="row text-center">
+			<div class="col-lg-3 col-md-6 col-sm-6">
+				<img src="img/award/AWARD CATEGORY-39.png" style="padding:10px">
+			</div>
+			<div class="col-lg-3 col-md-6 col-sm-6">
+				<img src="img/award/AWARD CATEGORY-40.png" style="padding:10px">
+			</div>
+			<div class="col-lg-3 col-md-6 col-sm-6">
+				<img src="img/award/AWARD CATEGORY-41.png" style="padding:10px">
+			</div>
+			<div class="col-lg-3 col-md-6 col-sm-6">
+				<img src="img/award/AWARD CATEGORY-42.png" style="padding:10px">
+			</div>
+		</div>
+		
+			<div class="col-lg-12 col-md-12 text-center">
+			<img src="img/icons.png" class="text-center" style="" id="event_overview_icon">
+				<h2 style="">EVENT OVERVIEW</h2>
+				<p style="text-align:justify">3rd Edition World Blockchain STO Summit will be one of the most important summits in Asia, dedicated to innovative technologies, bringing together the biggest names, and the brightest minds who are actively shaping the industry. World Blockchain STO Summit’s special focus will be given to understanding what “STOs” (securitized token offerings) are involved. Additionally, there will be coverage over other classes of emerging technology and alternative investment instruments, and how they can be leveraged to generate value and profit. In this summit, we will explore how STO's are a better choice for businesses looking to raise capital because they offer unique advantages such as low barrier of entry, fractional ownership and access to global investors. The Summit leverages the experience gained through the last 2 editions of the event to ensure maximum return on investment for all our sponsors, partners & attendees. Known popularly as the blockchain and crypto hub of Southeast Asia, Singapore, with its free market economy, stable socio-political environment, attractive tax framework, is consistently ranked as the world’s best place to do businesses using Blockchain technology and cryptocurrencies. Last year, Singapore was the second most popular location for initial coin offerings (ICOs), behind the United States. Recently, the Money Authority of Singapore (MAS) has announced it was working on a new bill to regulate crypto exchanges, and since prospective blockchain or crypto business owners can set up a startup in the country either as a resident or foreigner. All these favorable factors have encouraged many foreign and resident investors and entrepreneurs to choose Singapore as a place to launch their ICOs, STOs, and crypto exchanges.</p>
+			</div>
+		
+	</div>
+    </section> 
+ -->
+    <!--==========================
+      Speakers Section
+    ============================-->
+<!--     <section id="speakers" class="wow fadeInUp">
+      <div class="container">
+        <div class="section-header">
+          <h2>Event Speakers</h2>
+          <p>Here are some of our speakers</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="img/speakers/1.jpg" alt="Speaker 1" class="img-fluid">
+              <div class="details">
+                <h3><a href="speaker-details.html">Brenden Legros</a></h3>
+                <p>Quas alias incidunt</p>
+                <div class="social">
+                  <a href=""><i class="fa fa-twitter"></i></a>
+                  <a href=""><i class="fa fa-facebook"></i></a>
+                  <a href=""><i class="fa fa-google-plus"></i></a>
+                  <a href=""><i class="fa fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="img/speakers/2.jpg" alt="Speaker 2" class="img-fluid">
+              <div class="details">
+                <h3><a href="speaker-details.html">Hubert Hirthe</a></h3>
+                <p>Consequuntur odio aut</p>
+                <div class="social">
+                  <a href=""><i class="fa fa-twitter"></i></a>
+                  <a href=""><i class="fa fa-facebook"></i></a>
+                  <a href=""><i class="fa fa-google-plus"></i></a>
+                  <a href=""><i class="fa fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="img/speakers/3.jpg" alt="Speaker 3" class="img-fluid">
+              <div class="details">
+                <h3><a href="speaker-details.html">Cole Emmerich</a></h3>
+                <p>Fugiat laborum et</p>
+                <div class="social">
+                  <a href=""><i class="fa fa-twitter"></i></a>
+                  <a href=""><i class="fa fa-facebook"></i></a>
+                  <a href=""><i class="fa fa-google-plus"></i></a>
+                  <a href=""><i class="fa fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="img/speakers/4.jpg" alt="Speaker 4" class="img-fluid">
+              <div class="details">
+                <h3><a href="speaker-details.html">Jack Christiansen</a></h3>
+                <p>Debitis iure vero</p>
+                <div class="social">
+                  <a href=""><i class="fa fa-twitter"></i></a>
+                  <a href=""><i class="fa fa-facebook"></i></a>
+                  <a href=""><i class="fa fa-google-plus"></i></a>
+                  <a href=""><i class="fa fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="img/speakers/5.jpg" alt="Speaker 5" class="img-fluid">
+              <div class="details">
+                <h3><a href="speaker-details.html">Alejandrin Littel</a></h3>
+                <p>Qui molestiae natus</p>
+                <div class="social">
+                  <a href=""><i class="fa fa-twitter"></i></a>
+                  <a href=""><i class="fa fa-facebook"></i></a>
+                  <a href=""><i class="fa fa-google-plus"></i></a>
+                  <a href=""><i class="fa fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="img/speakers/6.jpg" alt="Speaker 6" class="img-fluid">
+              <div class="details">
+                <h3><a href="speaker-details.html">Willow Trantow</a></h3>
+                <p>Non autem dicta</p>
+                <div class="social">
+                  <a href=""><i class="fa fa-twitter"></i></a>
+                  <a href=""><i class="fa fa-facebook"></i></a>
+                  <a href=""><i class="fa fa-google-plus"></i></a>
+                  <a href=""><i class="fa fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section> -->
+
+    <!--==========================
+      Schedule Section
+    ============================-->
+<!--     <section id="schedule" class="section-with-bg">
+      <div class="container wow fadeInUp">
+        <div class="section-header">
+          <h2>Event Schedule</h2>
+          <p>Here is our event schedule</p>
+        </div>
+
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" href="#day-1" role="tab" data-toggle="tab">Day 1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#day-2" role="tab" data-toggle="tab">Day 2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#day-3" role="tab" data-toggle="tab">Day 3</a>
+          </li>
+        </ul>
+
+        <h3 class="sub-heading">Voluptatem nulla veniam soluta et corrupti consequatur neque eveniet officia. Eius
+          necessitatibus voluptatem quis labore perspiciatis quia.</h3>
+
+        <div class="tab-content row justify-content-center">
+
+     
+          <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>09:30 AM</time></div>
+              <div class="col-md-10">
+                <h4>Registration</h4>
+                <p>Fugit voluptas iusto maiores temporibus autem numquam magnam.</p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>10:00 AM</time></div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img src="img/speakers/1.jpg" alt="Brenden Legros">
+                </div>
+                <h4>Keynote <span>Brenden Legros</span></h4>
+                <p>Facere provident incidunt quos voluptas.</p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>11:00 AM</time></div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img src="img/speakers/2.jpg" alt="Hubert Hirthe">
+                </div>
+                <h4>Et voluptatem iusto dicta nobis. <span>Hubert Hirthe</span></h4>
+                <p>Maiores dignissimos neque qui cum accusantium ut sit sint inventore.</p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>12:00 AM</time></div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img src="img/speakers/3.jpg" alt="Cole Emmerich">
+                </div>
+                <h4>Explicabo et rerum quis et ut ea. <span>Cole Emmerich</span></h4>
+                <p>Veniam accusantium laborum nihil eos eaque accusantium aspernatur.</p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>02:00 PM</time></div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img src="img/speakers/4.jpg" alt="Jack Christiansen">
+                </div>
+                <h4>Qui non qui vel amet culpa sequi. <span>Jack Christiansen</span></h4>
+                <p>Nam ex distinctio voluptatem doloremque suscipit iusto.</p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>03:00 PM</time></div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img src="img/speakers/5.jpg" alt="Alejandrin Littel">
+                </div>
+                <h4>Quos ratione neque expedita asperiores. <span>Alejandrin Littel</span></h4>
+                <p>Eligendi quo eveniet est nobis et ad temporibus odio quo.</p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>04:00 PM</time></div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img src="img/speakers/6.jpg" alt="Willow Trantow">
+                </div>
+                <h4>Quo qui praesentium nesciunt <span>Willow Trantow</span></h4>
+                <p>Voluptatem et alias dolorum est aut sit enim neque veritatis.</p>
+              </div>
+            </div>
+
+          </div>
+   
+          <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-2">
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>10:00 AM</time></div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img src="img/speakers/1.jpg" alt="Brenden Legros">
+                </div>
+                <h4>Libero corrupti explicabo itaque. <span>Brenden Legros</span></h4>
+                <p>Facere provident incidunt quos voluptas.</p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>11:00 AM</time></div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img src="img/speakers/2.jpg" alt="Hubert Hirthe">
+                </div>
+                <h4>Et voluptatem iusto dicta nobis. <span>Hubert Hirthe</span></h4>
+                <p>Maiores dignissimos neque qui cum accusantium ut sit sint inventore.</p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>12:00 AM</time></div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img src="img/speakers/3.jpg" alt="Cole Emmerich">
+                </div>
+                <h4>Explicabo et rerum quis et ut ea. <span>Cole Emmerich</span></h4>
+                <p>Veniam accusantium laborum nihil eos eaque accusantium aspernatur.</p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>02:00 PM</time></div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img src="img/speakers/4.jpg" alt="Jack Christiansen">
+                </div>
+                <h4>Qui non qui vel amet culpa sequi. <span>Jack Christiansen</span></h4>
+                <p>Nam ex distinctio voluptatem doloremque suscipit iusto.</p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>03:00 PM</time></div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img src="img/speakers/5.jpg" alt="Alejandrin Littel">
+                </div>
+                <h4>Quos ratione neque expedita asperiores. <span>Alejandrin Littel</span></h4>
+                <p>Eligendi quo eveniet est nobis et ad temporibus odio quo.</p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>04:00 PM</time></div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img src="img/speakers/6.jpg" alt="Willow Trantow">
+                </div>
+                <h4>Quo qui praesentium nesciunt <span>Willow Trantow</span></h4>
+                <p>Voluptatem et alias dolorum est aut sit enim neque veritatis.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-3">
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>10:00 AM</time></div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img src="img/speakers/2.jpg" alt="Hubert Hirthe">
+                </div>
+                <h4>Et voluptatem iusto dicta nobis. <span>Hubert Hirthe</span></h4>
+                <p>Maiores dignissimos neque qui cum accusantium ut sit sint inventore.</p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>11:00 AM</time></div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img src="img/speakers/3.jpg" alt="Cole Emmerich">
+                </div>
+                <h4>Explicabo et rerum quis et ut ea. <span>Cole Emmerich</span></h4>
+                <p>Veniam accusantium laborum nihil eos eaque accusantium aspernatur.</p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>12:00 AM</time></div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img src="img/speakers/1.jpg" alt="Brenden Legros">
+                </div>
+                <h4>Libero corrupti explicabo itaque. <span>Brenden Legros</span></h4>
+                <p>Facere provident incidunt quos voluptas.</p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>02:00 PM</time></div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img src="img/speakers/4.jpg" alt="Jack Christiansen">
+                </div>
+                <h4>Qui non qui vel amet culpa sequi. <span>Jack Christiansen</span></h4>
+                <p>Nam ex distinctio voluptatem doloremque suscipit iusto.</p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>03:00 PM</time></div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img src="img/speakers/5.jpg" alt="Alejandrin Littel">
+                </div>
+                <h4>Quos ratione neque expedita asperiores. <span>Alejandrin Littel</span></h4>
+                <p>Eligendi quo eveniet est nobis et ad temporibus odio quo.</p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>04:00 PM</time></div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img src="img/speakers/6.jpg" alt="Willow Trantow">
+                </div>
+                <h4>Quo qui praesentium nesciunt <span>Willow Trantow</span></h4>
+                <p>Voluptatem et alias dolorum est aut sit enim neque veritatis.</p>
+              </div>
+            </div>
+
+          </div>
+         
+
+        </div>
+
+      </div>
+
+    </section> -->
+
+
+    <!--==========================
+      Venue Section
+    ============================-->
+<!--    <section id="venue" class="wow fadeInUp"> 
+       <div class="row no-gutters"> 
+         <div class="col-lg-5 col-md-5 venue-map"> 
+           <img src="img/WHY-EXHIBIT-SPONSOR.jpg" style="height:100%width:100%">
+          </div> 
+
+          <div class="col-lg-7 col-md-7 venue-info"> 
+           <div class="row justify-content-center"> 
+              <div class="col-11 col-lg-8"> 
+			  <img src="img/icons.png" class="text-center" style="" id="venue-info-icon">
+				<h2>WHY EXHIBIT SPONSOR</h2>
+				<p>Showcase your innovations to a highly targeted audienceMeet top influecers and thought leaders.</p>
+				<p>Engage in high value partnerships with global institutions looking to enter emerging markets.</p>
+				<p>Build partnerships and alliances and understand cutting edge innovative technologies, which will define and drive the future of the industry.</p>
+				<p>Increase awareness of your company and attract new business. Network in informal surroundings to ensure lasting relationships.</p>
+				<p>Ensure decision makers have hands on first experience for your products/Services.</p>
+				<p>Enhance visibility of your brand in front of global leaders in Blockchain & Fintech.</p>
+				<p>Pitch & network with high income Net-worth investors</p>
+				</div> 
+			</div> 
+           </div> 
+         </div> 
+
+    
+	</section> -->
+	<!--    <section id="venue" class="wow fadeInUp"> 
+       <div class="row no-gutters"> 
+	             <div class="col-lg-5 col-md-5 venue-info2"> 
+				   <div class="row justify-content-center"> 
+					  <div class="col-11 col-lg-8 text-center"> 
+					  <img src="img/icons.png" class="text-center" style="" id="venue-info2-icon">
+						<h2>WHO WILL ATTEND</h2>
+						<p>Family Offices</p>
+						<p>Crypto Fund Managers</p>
+						<p>Blockchain Entrepreneurs</p>
+						<p>Law Firms</p>
+						<p>Assest Management Firms</p>
+						<p>Private Equity</p>
+						<p>STOs</p>
+						<p>IEOs</p>
+						<p>ICOs</p>
+						<p>Exchanges</p>
+						<p>Regulation & Policy</p>
+						<p>IEOs</p>
+						<p>Entertainment & Content</p>
+						</div> 
+					</div> 
+           </div> 
+         <div class="col-lg-7 col-md-7 venue-map"> 
+           <img src="img/WHO-WILL-ATTEND_1.jpg" id="WHO-WILL-ATTEND_img">
+          </div> 
+         </div> 
+
+    
+	</section> -->
+     
+		
+
+    <!--==========================
+      SPEAKERS & PANELISTS Section
+    ============================-->
+<!-- <section id="speakers" class="section-with-bg wow fadeInUp">
+      <div class="container text-center">
+	  <img src="img/icons.png" class="text-center" style="margin-left:-310px;padding-top:30px;" id="speakers_icon">
+          <h2>SPEAKERS & PANELISTS</h2>
+    
+
+        <div class="row">
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card mb-5 mb-lg-0">
+              <div class="card-body text-center">
+			  <img src="img/SPEAKERS PANELISTS-1.png" style="padding:10px">
+                <p class="name text-center">Dr. Alaa Alaabed</p>
+               <p class="text-center">Advisor at Wethaq Capital Markets</p>
+                <div class="text-center">
+                  <a href="https://bh.linkedin.com/in/alaa-sami-alaabed-23a48115b" target="_blank"><img src="img/linkedin.png"></a>
+                </div>
+              </div>
+            </div>
+          </div>  
+		  <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card mb-5 mb-lg-0">
+              <div class="card-body text-center">
+			  <img src="img/SPEAKERS PANELISTS-2.png" style="padding:10px">
+                <h5 class="name text-center">Ronny Boesinga</h5>
+               <p class="text-center">Advisor at Wethaq Capital Markets</p>
+                 <div class="text-center">
+                  <a href="https://dk.linkedin.com/in/ronny-boesing-65b61720" target="_blank"><img src="img/linkedin.png"></a>
+                </div>
+              </div>
+            </div>
+          </div>  
+		  <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card mb-5 mb-lg-0">
+              <div class="card-body text-center">
+			  <img src="img/SPEAKERS PANELISTS-3.png" style="padding:10px">
+                <h5 class="name text-center" style="font-size:15px !important;">Saeed Hareb Al Darmaki</h5>
+               <p class="text-center" style="font-size:12px !important;">Managing Director at Alphabit Digita Currency Fund</p>
+                 <div class="text-center">
+                  <a href="https://ae.linkedin.com/in/saeed-al-darmaki-175b5485" target="_blank"><img src="img/linkedin.png" style="margin-top:18px;"></a>
+                </div>
+              </div>
+            </div>
+          </div>  
+		  <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card mb-5 mb-lg-0">
+              <div class="card-body text-center">
+			  <img src="img/SPEAKERS PANELISTS-4.png" style="padding:10px">
+                <h5 class="name text-center">Jen Buakaew</h5>
+               <p class="text-center">U.S. Blockchain Association</p>
+                 <div class="text-center">
+                  <a href="https://th.linkedin.com/in/jennyfromtheblockchain?trk=author_mini-profile_title" target="_blank"><img src="img/linkedin.png"></a>
+                </div>
+              </div>
+            </div>
+          </div> 
+		  
+         </div>
+		 
+		         <div class="row">
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card mb-5 mb-lg-0">
+              <div class="card-body text-center">
+			  <img src="img/SPEAKERS PANELISTS-5.png" style="padding:10px">
+                <h5 class="name text-center">Jason King</h5>
+               <p class="text-center">Managing Partner at CGS Group</p>
+                <div class="text-center">
+                  <a href="https://ae.linkedin.com/in/flashboy/zh-tw" target="_blank"><img src="img/linkedin.png"></a>
+                </div>
+              </div>
+            </div>
+          </div>  
+		  <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card mb-5 mb-lg-0">
+              <div class="card-body text-center">
+			  <img src="img/SPEAKERS PANELISTS-6.png" style="padding:10px">
+                <h5 class="name text-center">Vinod Kashyap</h5>
+               <p class="text-center">Director at NexGen Knowledge Solutions</p>
+                 <div class="text-center">
+                  <a href="https://in.linkedin.com/in/vinod-kashyap-60020317" target="_blank"><img src="img/linkedin.png"></a>
+                </div>
+              </div>
+            </div>
+          </div>  
+		  <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card mb-5 mb-lg-0">
+              <div class="card-body text-center">
+			  <img src="img/SPEAKERS PANELISTS-7.png" style="padding:10px">
+                <h5 class="name text-center">Melanie Mohr</h5>
+               <p class="text-center">CEO at Wom <br/>Protocol</p>
+                 <div class="text-center">
+                  <a href="https://de.linkedin.com/in/melaniemohrprofile" target="_blank"><img src="img/linkedin.png"></a>
+                </div>
+              </div>
+            </div>
+          </div>  
+		  <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card mb-5 mb-lg-0">
+              <div class="card-body text-center">
+			  <img src="img/SPEAKERS PANELISTS-8.png" style="padding:10px">
+                <h5 class="name text-center" style="font-size:18px !important;">Prof. Emilio Escartin</h5>
+               <p class="text-center" style="font-size:14px !important;">Professor of Islamic Finance IE Business School</p>
+                 <div class="text-center">
+                  <a href="https://ae.linkedin.com/in/emilioescartin" target="_blank"><img src="img/linkedin.png" style="margin-top:7px;"></a>
+                </div>
+              </div>
+            </div>
+          </div> 
+		  
+         </div>
+		 
+		         <div class="row">
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card mb-5 mb-lg-0">
+              <div class="card-body text-center">
+			  <img src="img/SPEAKERS PANELISTS-9.png" style="padding:10px">
+                <h5 class="name text-center">Ibrahim Subeh</h5>
+               <p class="text-center">Lecturer at UAE University</p>
+                <div class="text-center">
+                  <a href="https://www.linkedin.com/in/ibrahim-subeh-59a7b148" target="_blank"><img src="img/linkedin.png"></a>
+                </div>
+              </div>
+            </div>
+          </div>  
+		  <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card mb-5 mb-lg-0">
+              <div class="card-body text-center">
+			  <img src="img/SPEAKERS PANELISTS-10.png" style="padding:10px">
+                <h5 class="name text-center">Kokila Alagh</h5>
+               <p class="text-center">Founding partner at Karm Legal</p>
+                 <div class="text-center">
+                  <a href="https://ae.linkedin.com/in/kokila-alagh-6662315" target="_blank"><img src="img/linkedin.png"></a>
+                </div>
+              </div>
+            </div>
+          </div>  
+		  <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card mb-5 mb-lg-0">
+              <div class="card-body text-center">
+			  <img src="img/SPEAKERS PANELISTS-11.png" style="padding:10px">
+                <h5 class="name text-center">Jorge Sebastiao</h5>
+               <p class="text-center">CTO Eco-System at Huawei Technologies</p>
+                 <div class="text-center">
+                  <a href="https://ae.linkedin.com/in/sebastiao" target="_blank"><img src="img/linkedin.png"></a>
+                </div>
+              </div>
+            </div>
+          </div>  
+		
+		  
+         </div>
+
+</div> 
+ 
+
+
+    </section>-->
+<!-- 	<section id="sponsor">
+      <div class="container text-center">
+
+			
+			<img src="img/icons.png" class="text-center" style="" id="sponsor_icon">
+				<h2 style="margin:auto !important"> SPONSORS</h2>
+		
+			<div class="row">
+		
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<a href="https://stoglobalx.com/" target="_blank"><img src="img/sponsor/SPONSOR_BG.png" style="padding:10px"></a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<a href="https://hustletoken.org/" target="_blank"><img src="img/sponsor/SPONSOR_BG.png" style="padding:10px"></a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<a href="https://worldmarkets.com/" target="_blank"><img src="img/sponsor/SPONSOR_BG.png" style="padding:10px"></a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<a href="https://www.finhaven.com/" target="_blank"><img src="img/sponsor/SPONSOR_BG.png" style="padding:10px"></a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<a href="https://www.star-riser.com/" target="_blank"><img src="img/sponsor/SPONSOR_BG.png" style="padding:10px"></a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<a href="https://www.savingscoin.pt/" target="_blank"><img src="img/sponsor/SPONSOR_BG.png" style="padding:10px"></a>
+					</div>
+			</div>
+		
+		
+	</div>
+    </section>  -->
+<!-- 	 <section id="investment" class="section-with-bg wow fadeInUp">
+
+      <div class="container text-center">
+        <img src="img/icons.png" class="text-center" style="" id="investment_icon">
+          <h2>STRATEGIC & INVESTMENT PARTNERS</h2>
+  
+
+        <div class="row no-gutters supporters-wrap clearfix">
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/investment_partner/INVESTMENT PARTNERS-44.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/investment_partner/INVESTMENT PARTNERS-45.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+        
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/investment_partner/INVESTMENT PARTNERS-46.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/investment_partner/INVESTMENT PARTNERS-47.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/investment_partner/INVESTMENT PARTNERS-48.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+        
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/investment_partner/INVESTMENT PARTNERS-49.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/investment_partner/INVESTMENT PARTNERS-50.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/investment_partner/INVESTMENT PARTNERS-51.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+		  <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/investment_partner/INVESTMENT PARTNERS-52.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+		  <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/investment_partner/INVESTMENT PARTNERS-53.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+		  <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/investment_partner/INVESTMENT PARTNERS-54.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>  -->
+<!-- <section id="event_schedule" style="">
+	<div class="row" style="">
+
+		 <div class="text-center"style="height:300px;width:300px;border-radius:50%;border:10px solid #2dd3cb;margin:auto !important;background:#fff;">
+			<h2 style="">EVENT SCHEDULE</h2>
+			<p>Tentative Agenda!</p>
+			<br/>
+			<a class="download_button" href="pdf/Bahrain Brochure_Final_V001.pdf" target="_blank" style="">DOWNLOAD BROCHURE</a>
+		 </div> 
+	
+	</div>
+</section>  -->
+<!-- <section id="testimonial">
+      <div class="container text-center">
+	  <img src="img/icons.png" class="text-center" style="" id="testimonial_icon">
+	  <h2>FEW TESTIMONIALS FROM OUR SPONSORS AND ATTENDEES</h2>
+        <div class="row text-center">
+          <div class="col-lg-12">
+			<video id="video" style="" controls poster="img/testimonial-cover.png">
+				<source src="video/blockchain.mp4" type="video/mp4">
+				Your browser does not support HTML5 video.
+				</video>
+          </div>
+        </div>
+
+      </div>
+    </section> 	 -->
+<!-- 	    <section id="supporters" class="section-with-bg wow fadeInUp">
+
+      <div class="container text-center">
+      <img src="img/icons.png" class="text-center" style="" id="supporters_icon">
+          <h2>Media</h2>
+    
+
+        <div class="row no-gutters supporters-wrap clearfix">
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/media/Media-56.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/media/Media-57.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+        
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/media/Media-58.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/media/Media-59.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/media/Media-60.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+        
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/media/Media-61.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/media/Media-62.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+		  <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/media/Media-63.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/media/Media-64.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+        
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/media/Media-65.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/media/Media-66.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/media/Media-67.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+        
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/media/Media-68.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/media/Media-69.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/media/Media-70.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+		  <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/media/Media-71.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/media/Media-72.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+        
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/media/Media-73.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/media/Media-74.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/media/Media-75.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+        
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/media/Media-76.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/media/Media-77.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/media/Media-78.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+		  <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/media/Media-79.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/media/Media-80.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+        
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/media/Media-81.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/media/Media-82.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+		   <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="img/media/Media-83.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+
+        </div>
+
+      </div>
+
+    </section>  -->
+	
+<!-- 
+	<section id="buy_pass_bg" class="wow fadeInUp">
+      <div class="container text-center">
+	 
+        <div class="row text-center">
+		<div class="col-lg-4" style="">
+			<img src="img/PASS-06.jpg" style="position:relative;padding:10px !important" class="text-center">
+				<div class="centered" style="">
+				<h2 style="color:#ffa903 !important;font-size:22px;font-weight:700">GOLD PASS</h2>
+				<span style="font-size:50px;font-weight:700;color:#000;"> $250</span><br/><br/>
+				
+				<button type="button" class="register" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="standard-access">REGISTER</button>
+				
+					<br/><br/><br/><span style="color:#fff;font-size: 12px;">NORMAL SEATING</span><br/>
+					<span style="color:#fff;font-size: 12px;">LAUCHEONS OF BOTH DAYS</span><br/>
+					<span style="color:#fff;font-size: 12px;">NETWORKING COFFEE BREAKS</span><br/><br/>
+					<span style="color:#fff;font-size: 12px;"><del>AFTER PARTY<del></span><br/>
+					<span style="color:#fff;font-size: 12px;"><del>ACCESS TO SPEAKERS & INVESTORS<del></span><br/>
+				
+				</div>
+		</div>	<div class="col-lg-4">
+			<img src="img/PASS-06.jpg" style="position:relative;padding:10px !important" class="text-center">
+				<div class="centered" style="">
+				<h2 style="color:#ffa903 !important;font-size:22px;font-weight:700">VIP PASS</h2>
+				<span style="font-size:50px;font-weight:700;color:#000;"> $450</span><br/><br/>
+		
+				<button type="button" class="register" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="standard-access">REGISTER</button>
+					<br/><br/><br/><br/><span style="color:#fff;font-size: 12px;">RESERVE SEATING</span><br/>
+					<span style="color:#fff;font-size: 12px;">PRINTED MATERIALS</span><br/>
+					<span style="color:#fff;font-size: 12px;">LAUCHEONS OF BOTH DAYS</span><br/><br/>
+					<span style="color:#fff;font-size: 12px;">AFTER PARTY</span><br/>
+					<span style="color:#fff;font-size: 12px;">ACCESS TO SPEAKERS & INVESTORS</span><br/>
+					
+				</div>
+		</div>	<div class="col-lg-4">
+			<img src="img/PASS-06.jpg" style="position:relative;padding:10px !important" class="text-center">
+				<div class="centered" style="">
+				<h2 style="color:#ffa903 !important;font-size:22px;font-weight:700">VENDOR PASS </h2>
+				<span style="font-size:50px;font-weight:700;color:#000;"> $499</span><br/><br/>
+				
+				<button type="button" class="register" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="standard-access">REGISTER</button>
+					
+					<br/><br/><br/><span style="color:#fff;font-size: 12px;">NOTE: VENDOR PASSES ARE FOR SERVICE/SOLUTION PROVIDERS ONLY</span><br/><br/>
+					<span style="color:#fff;font-size: 12px;">CONFERENCE SESSIONS</span><br/>
+					<span style="color:#fff;font-size: 12px;">ACCESS TO EXHIBIT AREA LAUCHEONS & NETWORKING COFFEE BREAK REGISTER</span><br/>
+					
+				</div>
+		</div>
+		
+		
+
+	
+    <div id="buy-ticket-modal" class="modal fade">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" style="color:#000;">Register Your Interest </h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form method="POST" action="#">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="pname" name="your-name" placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="pemail" name="your-email" placeholder="Your Email">
+                </div>
+				<div class="form-group">
+                  <input type="text" class="form-control" id="pphone" name="your-mobile" placeholder="Your Mobile">
+                </div>
+                <div class="form-group">
+                  <select id="ticket-type" name="ticket-type" class="form-control pcategory" >
+                    <option value="" disabled selected>-- Select Your Pass Type --</option>
+                    <option value="gold-pass">Gold  Pass</option>
+                    <option value="vip-pass">VIP Pass</option>
+                    <option value="vendor-pass">Vendor Pass</option>
+                  </select>
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="register" onclick="Pass_Request()">REGISTER</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> 	
+	      -->
+    <!--==========================
+      Contact Section
+    ============================-->
+  <!--   <section id="contact" class="section-bg wow fadeInUp">
+
+      <div class="container text-center">
+			<img src="img/icons.png" class="text-center" style="" id="contact_icon">
+          <h2 class="text-center">Contact Us</h2>
+		<div class="row" style="text-align:left !important">
+		<div class="col-md-1"></div>
+        <div class="col-md-10 form">
+          <div id="sendmessage">Your message has been sent. Thank you!</div>
+          <div id="errormessage"></div>
+          <form action="" method="post" role="form" class="contactForm">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Full Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group col-md-6">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validation"></div>
+              </div>
+            </div>  
+			<div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Phone No" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group col-md-6">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Company Name" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validation"></div>
+              </div>
+            </div>
+			<div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="text" name="name" class="form-control" id="name" placeholder="City" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group col-md-6">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Select Country" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validation"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Where did you hear about us?" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+              <div class="validation"></div>
+            </div>
+			<div class="form-group" style="">
+			<span>I AM Interested in*</span><br/>
+              <input type="checkbox" class="" name="checkbox1" id="checkbox1"/>&nbsp;&nbsp;Delegate Pass <br/>
+			  <input type="checkbox" class="" name="checkbox1" id="checkbox1"/>&nbsp;&nbsp;Speaking Opportunity <br/>
+			  <input type="checkbox" class="" name="checkbox1" id="checkbox1"/>&nbsp;&nbsp;Sponsoring the Summit <br/>
+			  <input type="checkbox" class="" name="checkbox1" id="checkbox1"/>&nbsp;&nbsp;Booking an Exhibition Space <br/>
+			  <input type="checkbox" class="" name="checkbox1" id="checkbox1"/>&nbsp;&nbsp;Media Partnership <br/>
+              <div class="validation"></div>
+            </div> 			
+        
+            <div class="text-center"><button type="submit" style="border:1px solid #fff;">SUBMIT</button></div>
+          </form>
+        </div>
+		<div class="col-md-1"></div>
+		</div>
+		<br/><br/>
+		        <div class="row contact-info">
+
+          <div class="col-md-4">
+            <div class="contact-address">
+              <h3><img src="img/address-icon/Icons-87.png"></h3>
+              <address>Kormangala 4th Block</address>
+			  <address>Bangalore-560034,India</address>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-phone">
+              <h3><img src="img/address-icon/Icons-88.png"></h3>
+              <p>+91 9620 3049 06</p><p>+91 8884 1131 31</p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-email">
+              <h3><img src="img/address-icon/Icons-89.png"></h3>
+              <p><a href="mailto:info@gulfexcellence.com">info@gulfexcellence.com</a></p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section> -->
+	<!-- <section id="know_more">
+      <div class="container text-center">
+	  <img src="img/icons.png" class="text-center" style="margin-left:-320px;padding-top:30px;" id="know_more_icon">
+	  <h2>KNOW MORE ABOUT US</h2>
+        <div class="row text-center">
+          <div class="col-lg-12">
+			<video id="video" controls poster="img/gulfxellencePoster.png">
+				<source src="video/GulfXcellence.mp4" type="video/mp4">
+				Your browser does not support HTML5 video.
+				</video>
+          </div>
+        </div>
+
+      </div>
+    </section> 	 -->
+	
+<!-- <section id="upcoming_Event">
+      <div class="container text-center">
+	  <img src="img/icons.png" class="text-center" style="" id="upcoming_Event_icon">
+	  <h2>UPCOMING EVENTS</h2>
+        <div class="row text-center">
+          <div class="col-lg-3 col-md-3 col-sm-6">
+		  <img src="img/upcoming_event/EVENTS-14.png" class="img-fluid" style="padding:10px;">
+            <h3 style="color:#000;padding:10px;">PHILIPPINES</h3>
+			<p>JUNE 2020</p>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6">
+		  <img src="img/upcoming_event/EVENTS-15.png" style="padding:10px;">
+            <h3 style="color:#000;padding:10px;">MAURITIUS</h3>
+			<p>AUGUST 2020</p>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6">
+		  <img src="img/upcoming_event/EVENTS-16.png" style="padding:10px;">
+            <h3 style="color:#000;padding:10px;">UAE</h3>
+			<p>OCTOBER 2020</p>
+          </div>
+		  <div class="col-lg-3 col-md-3 col-sm-6">
+		  <img src="img/upcoming_event/EVENTS-17.png" style="padding:10px;">
+            <h3 style="color:#000;padding:10px;">SWITZERLAND</h3>
+			<p>DECEMBER 2020</p>
+          </div>
+        </div>
+
+      </div>
+    </section>  -->
+
+  </main>
+
+
+  <!--==========================
+    Footer
+  ============================-->
+<!--   <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+				<div class="row">
+						 <img src="img/Logo-38.png" alt="TheEvenet" class="" style="margin:auto;padding-bottom:30px;" /><br/>
+				</div>
+				<div class="row text-center">
+						 <p style="margin:auto;font-size:20px;background:#2dd3cb;border-radius:5px;margin-bottom:20px !important;padding:5px 10px;border:1px solid #fff;"> ORGANISER <p>
+				</div>
+				<div class="row">
+						<div class="col-lg-12">
+							<p>World's leading event management & Business Training company, GulfXellence has built its name by producing high quality B2B events, delivering international trade expo's across the globe. GulfXellence is also a key player when it comes to certified professional trainings particularly in the Fintech, Health Safety & Environment, and Energy sectors. GulfXellence was founded by innovative minded entrepreneurs who understand that relationship building, networking and skilled training are keys to business growth and long lasting success.</p>
+							<p>GulfXellence has been providing business leaders around the world a hybrid platform where businesses can showcase and leverage their competitive values and strengths to the audience globally. GulfXellence's goals are to help Clients grow and succeed. We are fully committed to your results, as we believe that we win only when you win. As for our mission, we strive to become the world's No.1 leader in producing meaningful and value adding events that will result in a wonderful experience that strengthen our Clients marketing position and maximize their ROI. We are your trusted name when it comes to getting the most value from your marketing and training budgets. Our reputation is through going that extra mile to get you your results.</p>
+							<p>At GulfXellence, our team are driven and we believe that continuous innovation, implementation and improvement will supercharge the power of content and context, which in turn will amplify the exponential growth to our customers.</p>
+							<p>For your next business events and training needs, reach out to us at GulfXellence www.gulfxellence.com</p>
+							
+							<div class="col-lg-3" style="float:right;margin-top:40px;">
+								<h3 style="color:#fff;font-size:22px;font-weight:700">SOCIAL CONNECTION</h3>
+								<p>You should connect social area for Any update </p>
+								 <div class="social-links" style="">
+									  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+									
+									  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+								</div>
+							
+							</div>
+						</div>
+				</div>
+   
+
+        </div>
+      </div>
+
+    <div class="container">
+      <div class="copyright">
+        <strong>&copy; COPYRIGHT GULF EXCELLENCE 2019. ALL RIGHTS RESERVED.</strong>
+      </div>
+    </div>
+  </footer> -->
+
+<!--   <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a> -->
+<script>
+  function register_form(){
+      //alert("hello world");
+   var username= $("#name").val();
+   var emailid= $("#email").val();
+   var phoneno= $("#phone").val();
+   var subject= $("#subject").val();
+   var message= $("#message").val();
+   
+   var companyName= $("#companyName").val();
+   var city= $("#city").val();
+   var country= $("#country").val();
+   var iam = $(".iam:checked").val();
+   var q1  = $("#q1").val();
+   var q2 = "";
+   
+         $("#promsg").html("");
+       
+         var dataString = 'username='+username+'&emailid='+emailid+'&phoneno='+phoneno+'&subject='+subject+'&q1='+q1+'&q2='+q2+'&companyName='+companyName+'&city='+city+'&country='+country+'&iam='+iam+'&message='+message;
+         //alert(dataString);
+		 if(username==""){
+		     alert("please enter your name");
+	        return
+	     }else if(emailid==""){
+           alert("please enter your email id");
+	        return
+	     }else if(phoneno==""){
+	        alert("please enter your phone number");
+	        return
+	     }
+	     else if(iam==""){
+	        alert("please select your I am Interested in");
+	        return
+	     }
+	     else{
+	      $.ajax({
+		  url: "process.php",
+		  type: "POST",
+		  data: dataString ,
+		  success: function(data){
+		    if(data.includes("success")){
+		       alert("Successfully Registered");
+		       $("#name").val("");
+			   $("#email").val("");
+			   $("#phone").val("");
+			   $("#subject").val("");
+			   $("#message").val("");
+			   $("#companyName").val("");
+			   $("#city").val("");
+			   $("#country").val("");
+			   $("#iam").val("");
+		       $("#promsg").html("<span style='color:#23b5b2;font-size:20px'>Successfully Registered</span>");
+		       $("#promsg").hide();
+		       location.reload();
+		    }else{
+		      $("#promsg").html("<span style='color:red;font-size:20px'>Somthing Went Wrong try again</span>");
+		    }
+		  },
+		   error: function(jqXHR, textStatus, errorThrown) {
+		      alert(errorThrown);
+		   }
+		});
+		}
+}
+
+  function Pass_Request(){
+   var pname= $("#pname").val();
+   var pemail= $("#pemail").val();
+   var pphone= $("#pphone").val();
+   var pcategory= $(".pcategory").val();
+   
+         $("#pstatus").html("");
+       
+         var dataString = 'pname='+pname+'&pemail='+pemail+'&pphone='+pphone+'&pcategory='+pcategory;
+		 if(pname==""||pemail==""||pphone==""||pcategory=="")
+		 {
+	        $("#pstatus").html("<span style='color:red;font-size:20px'>Please Fill all field</span>");
+	     }else{
+	      $.ajax({
+		  url: "process1.php",
+		  type: "POST",
+		  data: dataString ,
+		  success: function(data){
+		    if(data.includes("success")){
+		       $("#pname").val("");
+			   $("#pemail").val("");
+			   $("#pphone").val("");
+			   $("#pcategory").val("");
+		       $("#pstatus").html("<span style='color:#23b5b2;font-size:17px'>We have received your request, We will contact you shortly.</span>");
+		    }else{
+		      $("#pstatus").html("<span style='color:red;font-size:20px'>Somthing Went Wrong try again</span>");
+		    }
+		  },
+		   error: function(jqXHR, textStatus, errorThrown) {
+		      alert(errorThrown);
+		   }
+		});
+		}
+   
+}
+</script>
+		
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/venobox/venobox.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

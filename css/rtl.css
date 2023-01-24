@@ -1,0 +1,186 @@
+body.rtl{
+    direction: rtl;
+    text-align: right !important;
+}
+body.rtl .row{
+    margin-left: 0px !important;
+}
+body.rtl1 .row{
+    margin-left: 0px !important;
+}
+body.rtl2 .row{
+    margin-left: 0px !important;
+}
+body.rtl1{
+    direction: rtl;
+    text-align: right !important;
+}
+body.rtl2{
+    direction: rtl;
+    text-align: right !important;
+}
+.rtl .header-area{
+    right: 0 !important;
+    
+}
+
+/* .rtl .navbar {
+ float: right !important;
+} */
+ @media (min-width: 768px){
+ .rtl .navbar-header {
+    float: right!important;
+}
+}
+
+@media (min-width: 1200px)
+  {
+   .rtl .rtlrow{
+        float: right !important;
+    }
+    .rtl2 .rtlrow{
+        float: right !important;
+    }
+    .rtl1 .rtlrow1{
+        float: right !important;
+    }
+    .rtl2 .rtlrow1{
+        float: right !important;
+    }
+    .rtl .rtlcol{
+        float: right !important;
+    }
+    
+  }
+.rtl .element.style {
+    
+    text-align: left !important;
+}
+ 
+.rtlnav{
+    
+  padding-top: 1%;
+    /* direction: ltr; */
+    /* float:right !important; */
+}
+.navrtl2{
+    text-align: right !important;
+}
+/* header */
+@media (min-width: 768px){
+.rtl .navbar-nav>li {
+    float: right;
+}}
+
+/* footr */
+@media (min-width: 992px){
+.rtl .col-md-5 {
+    width: 42.666667%;
+}}
+/* abt */
+
+
+/* side section white
+.row {
+    margin-right: -15px; 
+     margin-left: -15px;
+} */
+/* about nav strt*/
+.rtl1 .header-area{
+    right: 0 !important;
+    
+}
+@media (min-width: 768px){
+    .rtl1 .navbar-header {
+       float: right!important;
+   }
+   }
+   @media (min-width: 768px){
+    .rtl1 .navbar-nav>li {
+        float: right;
+    }}
+/* add class at nav ul that navbar-left rtlnav */
+/* about nav end*/
+
+/* about footer start*/
+/* rtlrow1 add this class */
+body.rtl1 .textrtl{
+    
+    text-align: right !important;
+}
+body.rtl2 .textrtl{
+    
+    text-align: right !important;
+}
+@media (min-width: 992px){
+    .rtl1 #contact .col-md-5 {
+        width: 42.666667%;
+    }
+   /* .rtl1 #missvision .col-md-12{
+    float: right !important;
+   } */
+}
+/* about footer end*/
+/* csr */
+
+/* @media (min-width: 992px){
+    
+    .rtl1 #aboutarea .container .row .col-md-12 {
+        float: right !important;
+    }
+} */
+/* @media (min-width: 992px) {
+    .rtl1 .spsp {
+      float: right;
+    }} */
+
+    /* treatment */
+    .rtl2 .header-area{
+        right: 0 !important;
+        
+    }
+    @media (min-width: 768px){
+        .rtl2 .navbar-header {
+           float: right!important;
+       }
+       }
+       @media (min-width: 768px){
+        .rtl2 .navbar-nav>li {
+            float: right;
+        }}
+        /* ftr */
+@media (min-width: 992px){
+    .rtl2 #contact .col-md-5 {
+        width: 42.666667%;
+    }}
+
+
+    /* number at rightside treatment */
+    @media (min-width: 992px){
+
+ .rtl2 .col-md-1
+  {
+    float: right !important;
+  }
+    }
+
+/* doctor */
+@media (min-width: 1200px){
+  .rtl2 #doctordetails .col-lg-8{
+        float: right !important;
+        }
+}
+#contact Style Attribute {
+    /* background: #444; */
+    text-align: right !important;
+}
+
+/* @media (min-width: 992px){
+  #missvision .contr .col-md-12{
+        float: right !important;
+    }
+} */
+/* home page :GLOBALLY RECOGNISED HOSPITALS  nav:NATUROPATHY & AYURVEDA*/
+/* ftr
+Your message has been sent. Thank you! ---cheyditilya*/
+/* 21-12 */
